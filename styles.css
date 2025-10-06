@@ -1,0 +1,146 @@
+/* Fondo general */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+header {
+    background-color: rgba(0, 0, 0, 0.75);
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2.2em;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+/* Productos */
+.productos {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.producto {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.producto img {
+    width: 100%;
+    border-radius: 12px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.producto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.producto h3 {
+    margin: 10px 0 5px;
+    font-size: 1.1em;
+}
+
+.producto p {
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+/* Contacto */
+.contacto {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.whatsapp-btn {
+    display: inline-block;
+    background-color: #25D366;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+    transition: background 0.3s;
+}
+
+.whatsapp-btn:hover {
+    background-color: #20b85b;
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25D366;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: transform 0.3s;
+}
+
+.whatsapp-float img {
+    width: 45px;
+    height: 45px;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* Adaptación móvil */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+    .grid-productos {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 0.9em;
+}
